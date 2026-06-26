@@ -37,3 +37,8 @@ async function loadHistory(){
 }
 
 loadHistory();
+if("serviceWorker" in navigator){
+
+    navigator.serviceWorker.register("service-worker.js");
+
+}

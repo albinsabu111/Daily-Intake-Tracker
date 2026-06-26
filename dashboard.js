@@ -86,12 +86,56 @@ document.getElementById("riceProgress").style.width = ricePercent + "%";
         else break;
     }
 
-    document.getElementById("sugarStreak").textContent = sugarStreak;
-    document.getElementById("milkStreak").textContent = milkStreak;
-    document.getElementById("riceStreak").textContent = riceStreak;
+  document.getElementById("sugarStreak").textContent = sugarStreak;
+document.getElementById("milkStreak").textContent = milkStreak;
+document.getElementById("riceStreak").textContent = riceStreak;
 
-    // Chart
-    new Chart(document.getElementById("intakeChart"), {
+
+// ======================
+// Weekly Summary
+// ======================
+
+const lastWeek = data.slice(Math.max(1, data.length - 7));
+
+const weekSugar = lastWeek.filter(row => row[1] === "Yes").length;
+const weekMilk = lastWeek.filter(row => row[2] === "Yes").length;
+const weekRice = lastWeek.filter(row => row[3] === "Yes").length;
+
+document.getElementById("weekSugar").textContent =
+`${weekSugar} / ${lastWeek.length}`;
+
+document.getElementById("weekMilk").textContent =
+`${weekMilk} / ${lastWeek.length}`;
+
+document.getElementById("weekRice").textContent =
+`${weekRice} / ${lastWeek.length}`;
+
+
+// ======================
+// Monthly Summary
+// ======================
+
+const lastMonth = data.slice(Math.max(1, data.length - 30));
+
+const monthSugar = lastMonth.filter(row => row[1] === "Yes").length;
+const monthMilk = lastMonth.filter(row => row[2] === "Yes").length;
+const monthRice = lastMonth.filter(row => row[3] === "Yes").length;
+
+document.getElementById("monthSugar").textContent =
+`${monthSugar} / ${lastMonth.length}`;
+
+document.getElementById("monthMilk").textContent =
+`${monthMilk} / ${lastMonth.length}`;
+
+document.getElementById("monthRice").textContent =
+`${monthRice} / ${lastMonth.length}`;
+
+
+// ======================
+// Chart
+// ======================
+
+new Chart(document.getElementById("intakeChart"), {
 
         type: "line",
 
@@ -244,7 +288,7 @@ document.getElementById("riceProgress").style.width = ricePercent + "%";
         }
 
     });
-
+    
 }
 
 loadDashboard();
