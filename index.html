@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Intake Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<nav class="navbar">
+
+<div class="logo">
+
+🌿 Daily Intake
+
+</div>
+
+<div class="menu">
+
+<a class="active" href="index.html">🏠 Home</a>
+
+<a href="dashboard.html">📊 Dashboard</a>
+
+<a href="history.html">📜 History</a>
+
+</div>
+
+</nav>
+
+<h1>Daily Intake Tracker</h1>
+
+    <p id="today"></p>
+
+    <form id="intakeForm">
+
+        <!-- Sugar -->
+        <div class="card">
+
+            <h2>🍬 Sugar Intake</h2>
+
+            <p>Did you consume sugar today?</p>
+
+            <div class="choice-group">
+
+                <button type="button"
+                        class="choice"
+                        data-question="sugar"
+                        data-value="Yes">
+                    YES
+                </button>
+
+                <button type="button"
+                        class="choice"
+                        data-question="sugar"
+                        data-value="No">
+                    NO
+                </button>
+
+            </div>
+
+            <input type="hidden"
+                   name="sugar"
+                   id="sugar"
+                   required>
+
+        </div>
+
+        <!-- Milk -->
+        <div class="card">
+
+            <h2>🥛 Milk Intake</h2>
+
+            <p>Did you drink milk today?</p>
+
+            <div class="choice-group">
+
+                <button type="button"
+                        class="choice"
+                        data-question="milk"
+                        data-value="Yes">
+                    YES
+                </button>
+
+                <button type="button"
+                        class="choice"
+                        data-question="milk"
+                        data-value="No">
+                    NO
+                </button>
+
+            </div>
+
+            <input type="hidden"
+                   name="milk"
+                   id="milk"
+                   required>
+
+        </div>
+
+        <!-- Rice -->
+        <div class="card">
+
+            <h2>🍚 Rice Intake</h2>
+
+            <p>Did you eat rice today?</p>
+
+            <div class="choice-group">
+
+                <button type="button"
+                        class="choice"
+                        data-question="rice"
+                        data-value="Yes">
+                    YES
+                </button>
+
+                <button type="button"
+                        class="choice"
+                        data-question="rice"
+                        data-value="No">
+                    NO
+                </button>
+
+            </div>
+
+            <input type="hidden"
+                   name="rice"
+                   id="rice"
+                   required>
+
+        </div>
+
+        <button id="submitBtn" type="submit">
+
+            Submit Today's Entry
+
+        </button>
+
+    </form>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

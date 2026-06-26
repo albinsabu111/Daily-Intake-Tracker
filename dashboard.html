@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<nav class="navbar">
+
+<div class="logo">
+
+🌿 Daily Intake
+
+</div>
+
+<div class="menu">
+
+<a href="index.html">🏠 Home</a>
+
+<a class="active" href="dashboard.html">📊 Dashboard</a>
+
+<a href="history.html">📜 History</a>
+
+</div>
+
+</nav>
+
+
+<h1>Dashboard</h1>
+
+<p class="subtitle">
+
+Your progress at a glance
+
+</p>
+
+
+<div class="stats-grid">
+    <div class="card">
+
+    <h2>📅 Today's Status</h2>
+
+    <div class="today-status">
+
+        <div class="status-item">
+            <span>🍬 Sugar</span>
+            <span id="todaySugar">--</span>
+        </div>
+
+        <div class="status-item">
+            <span>🥛 Milk</span>
+            <span id="todayMilk">--</span>
+        </div>
+
+        <div class="status-item">
+            <span>🍚 Rice</span>
+            <span id="todayRice">--</span>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="stat-card">
+
+<h3>🍬 Sugar</h3>
+
+<h2 id="sugarDays">0</h2>
+
+<p>Sugar Days</p>
+
+</div>
+
+<div class="stat-card">
+
+<h3>🥛 Milk</h3>
+
+<h2 id="milkDays">0</h2>
+
+<p>Milk Days</p>
+
+</div>
+
+<div class="stat-card">
+
+<h3>🍚 Rice</h3>
+
+<h2 id="riceDays">0</h2>
+
+<p>Rice Days</p>
+
+</div>
+
+</div>
+
+
+<div class="stats-grid">
+
+    <div class="stat-card">
+        <h3>🍬 Sugar Streak</h3>
+        <h2 id="sugarStreak">0</h2>
+        <p>Days</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>🥛 Milk Streak</h3>
+        <h2 id="milkStreak">0</h2>
+        <p>Days</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>🍚 Rice Streak</h3>
+        <h2 id="riceStreak">0</h2>
+        <p>Days</p>
+    </div>
+
+</div>
+
+
+<div class="card">
+
+<h2>📈 Trends</h2>
+
+<div class="chart-placeholder">
+
+Charts coming soon...
+
+</div>
+
+</div>
+
+</div>
+
+<script src="dashboard.js"></script>
+
+</body>
+
+</html>
