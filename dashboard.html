@@ -4,7 +4,6 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Dashboard</title>
@@ -15,136 +14,141 @@
 
 <body>
 
-<div class="container">
+<div class="container fade-in">
 
-<nav class="navbar">
+    <nav class="navbar">
 
-<div class="logo">
+        <div class="logo">
+            🌿 Daily Intake
+        </div>
 
-🌿 Daily Intake
+        <div class="menu">
+            <a href="index.html">🏠 Home</a>
+            <a class="active" href="dashboard.html">📊 Dashboard</a>
+            <a href="history.html">📜 History</a>
+        </div>
 
-</div>
+    </nav>
 
-<div class="menu">
+    <h1>Dashboard</h1>
 
-<a href="index.html">🏠 Home</a>
+    <p class="subtitle">
+        Your progress at a glance
+    </p>
 
-<a class="active" href="dashboard.html">📊 Dashboard</a>
+    <!-- Today's Status -->
 
-<a href="history.html">📜 History</a>
-
-</div>
-
-</nav>
-
-
-<h1>Dashboard</h1>
-
-<p class="subtitle">
-
-Your progress at a glance
-
-</p>
-
-
-<div class="stats-grid">
     <div class="card">
 
-    <h2>📅 Today's Status</h2>
+        <h2>📅 Today's Status</h2>
 
-    <div class="today-status">
+        <div class="today-status">
 
-        <div class="status-item">
-            <span>🍬 Sugar</span>
-            <span id="todaySugar">--</span>
+            <div class="status-item">
+                <span>🍬 Sugar</span>
+                <span id="todaySugar">--</span>
+            </div>
+
+            <div class="status-item">
+                <span>🥛 Milk</span>
+                <span id="todayMilk">--</span>
+            </div>
+
+            <div class="status-item">
+                <span>🍚 Rice</span>
+                <span id="todayRice">--</span>
+            </div>
+
         </div>
 
-        <div class="status-item">
-            <span>🥛 Milk</span>
-            <span id="todayMilk">--</span>
+    </div>
+
+    <!-- Total Days -->
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+
+    <h3>🍬 Sugar</h3>
+
+    <h2 id="sugarDays">0 Days</h2>
+
+    <p id="sugarPercent">0%</p>
+
+    <div class="progress-bar">
+        <div id="sugarProgress" class="progress-fill sugar-fill"></div>
+    </div>
+
+</div>
+
+        <div class="stat-card">
+
+    <h3>🥛 Milk</h3>
+
+    <h2 id="milkDays">0 Days</h2>
+
+    <p id="milkPercent">0%</p>
+
+    <div class="progress-bar">
+        <div id="milkProgress" class="progress-fill milk-fill"></div>
+    </div>
+
+</div>
+
+        <div class="stat-card">
+
+    <h3>🍚 Rice</h3>
+
+    <h2 id="riceDays">0 Days</h2>
+
+    <p id="ricePercent">0%</p>
+
+    <div class="progress-bar">
+        <div id="riceProgress" class="progress-fill rice-fill"></div>
+    </div>
+
+</div>
+
+    </div>
+
+    <!-- Current Streak -->
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <h3>🔥 Sugar Streak</h3>
+            <h2 id="sugarStreak">0</h2>
+            <p>Days</p>
         </div>
 
-        <div class="status-item">
-            <span>🍚 Rice</span>
-            <span id="todayRice">--</span>
+        <div class="stat-card">
+            <h3>🔥 Milk Streak</h3>
+            <h2 id="milkStreak">0</h2>
+            <p>Days</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>🔥 Rice Streak</h3>
+            <h2 id="riceStreak">0</h2>
+            <p>Days</p>
         </div>
 
     </div>
 
-</div>
+    <!-- Chart -->
 
-<div class="stat-card">
+    <div class="card">
 
-<h3>🍬 Sugar</h3>
+        <h2>📈 Daily Intake Trends</h2>
 
-<h2 id="sugarDays">0</h2>
+        <canvas id="intakeChart"></canvas>
 
-<p>Sugar Days</p>
-
-</div>
-
-<div class="stat-card">
-
-<h3>🥛 Milk</h3>
-
-<h2 id="milkDays">0</h2>
-
-<p>Milk Days</p>
-
-</div>
-
-<div class="stat-card">
-
-<h3>🍚 Rice</h3>
-
-<h2 id="riceDays">0</h2>
-
-<p>Rice Days</p>
-
-</div>
-
-</div>
-
-
-<div class="stats-grid">
-
-    <div class="stat-card">
-        <h3>🍬 Sugar Streak</h3>
-        <h2 id="sugarStreak">0</h2>
-        <p>Days</p>
-    </div>
-
-    <div class="stat-card">
-        <h3>🥛 Milk Streak</h3>
-        <h2 id="milkStreak">0</h2>
-        <p>Days</p>
-    </div>
-
-    <div class="stat-card">
-        <h3>🍚 Rice Streak</h3>
-        <h2 id="riceStreak">0</h2>
-        <p>Days</p>
     </div>
 
 </div>
 
-
-<div class="card">
-
-<h2>📈 Trends</h2>
-
-<div class="chart-placeholder">
-
-Charts coming soon...
-
-</div>
-
-</div>
-
-</div>
-
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="dashboard.js"></script>
 
 </body>
-
 </html>

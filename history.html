@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>History</title>
 
@@ -17,37 +16,65 @@ content="width=device-width, initial-scale=1.0">
 
 <div class="container">
 
-<nav>
+<nav class="navbar">
 
-<h1>🌿 Daily Intake Tracker</h1>
+<div class="logo">
+🌿 Daily Intake
+</div>
 
 <div class="menu">
-
 <a href="index.html">🏠 Home</a>
-
-<a href="dashboard.html">
-📊 Dashboard
-</a>
-
-<a href="history.html" class="active">
-📜 History
-</a>
-
+<a href="dashboard.html">📊 Dashboard</a>
+<a class="active" href="history.html">📜 History</a>
 </div>
 
 </nav>
 
-<div class="card">
+<h1>History</h1>
 
-<h2>History</h2>
-
-<p>
-Previous entries will appear here.
+<p class="subtitle">
+Your previous daily entries
 </p>
 
+<div class="card">
+
+<table class="history-table">
+
+<thead>
+
+<tr>
+
+<th>Date</th>
+<th>🍬 Sugar</th>
+<th>🥛 Milk</th>
+<th>🍚 Rice</th>
+
+</tr>
+
+</thead>
+
+<tbody id="historyTable">
+
+<tr>
+
+<td colspan="4">
+
+Loading...
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
 </div>
 
 </div>
+
+<script src="history.js"></script>
 
 </body>
+
 </html>
